@@ -4,7 +4,7 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: 'Vuepress Docs Boilerplate',
+  title: 'Tuna',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
@@ -27,14 +27,16 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
   themeConfig: {
-    repo: '',
-    editLinks: false,
-    docsDir: '',
-    editLinkText: '',
-    lastUpdated: false,
+    repo: 'shichuyibushishiwu/Tuna.Revit.Extensions',
+    editLinks: true,
+    logo:'/assets/images/tuna.png',
+    docsRepo:'shichuyibushishiwu/shichuyibushishiwu.github.io',
+    docsDir: 'docs',
+    editLinkText: '帮助我们完善文档',
+    lastUpdated: '最后更新',
     nav: [
       {
-        text: 'Guide',
+        text: 'Api 文档',
         link: '/guide/',
       },
       {
@@ -42,18 +44,21 @@ module.exports = {
         link: '/config/'
       },
       {
-        text: 'VuePress',
-        link: 'https://v1.vuepress.vuejs.org'
+        text: 'BiliBili',
+        link: 'https://space.bilibili.com/14252097?spm_id_from=333.1007.0.0'
       }
     ],
     sidebar: {
       '/guide/': [
         {
-          title: 'Guide',
+          title: '金枪鱼API文档',
           collapsable: false,
           children: [
             '',
-            'using-vue',
+            'api-query-element.md',
+            'api-select-element.md',
+            'api-geometry.md',
+            'api-transaction.md',
           ]
         }
       ],
