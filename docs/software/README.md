@@ -12,18 +12,16 @@ sidebar: auto
 
 ### 过滤器管理
 
-- Type: `string`
-- Default: `/`
+- 当前视图: `view`
+- 复制到其他视图: `view`
 
 ### 管道系统
 
-- Type: `string`
-- Default: `/`
+> 对管道系统的基本管理功能
 
 ### 风管系统
 
-- Type: `string`
-- Default: `/`
+> 对风管系统的基本管理功能
 
 ## 软件下载
 
