@@ -1,5 +1,9 @@
 # 了解金枪鱼
 
+![GitHub](https://img.shields.io/github/license/shichuyibushishiwu/Tuna.Revit.Extension?label=License)
+![GitHub](https://img.shields.io/badge/Shiwu-Tuna-green)
+![GitHub](https://img.shields.io/nuget/dt/Tuna.Revit.Extension?style=flat&logo=nuget&label=nuget&link=https%3A%2F%2Fwww.nuget.org%2Fpackages%2FTuna.Revit.Extension%2F)
+
 ::: tip Introduction
 金枪鱼扩展包是一个基于 Revit API 进行开发的开源项目，项目兼容`2016`-`2024`版本的代码，旨在使用扩展包快速开发 Revit 应用程序。
 :::

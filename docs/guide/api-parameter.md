@@ -4,21 +4,21 @@
 
 ## 通过 Id 获取参数(Get parameter by parameter element id )
 
-```C#
+```csharp
 Parameter parameter = element.GetParameter(new ElementId(-122344));
 
 ```
 
 当然也可以使用扩展库内置对象进行获取
 
-```C#
+```csharp
 Parameter parameter = element.GetParameter(Constants.BuiltInParameters.View.Name);
 
 ```
 
 ## 获取参数的值(Get parameter value)
 
-```C#
+```csharp
 //Obtain parameter value based on StorageType
 int value= element.GetParameterValue<int>("Width");
 
@@ -26,7 +26,7 @@ int value= element.GetParameterValue<int>("Width");
 
 ## 设置参数的值(Set Parameter Value)
 
-```C#
+```csharp
 //Set parameter value based on StorageType
 element.SetParameterValue<int>("Width",10);
 ```

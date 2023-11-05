@@ -1,4 +1,4 @@
-# 内置参数（BuiltInParameters）
+# 内置参数
 
 > 为了方便开发者使用，扩展库添加了常量类，存储部分常用的内置参数的 Id，它们分别包括:
 
@@ -7,7 +7,6 @@
 ```csharp
 //无效类：返回BuiltInParameters枚举类下的INVALID的Id
 BuiltInParameters.Invaild
-
 ```
 
 ### 视图（View）
