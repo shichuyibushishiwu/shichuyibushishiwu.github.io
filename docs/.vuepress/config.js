@@ -54,12 +54,42 @@ module.exports = {
         {
           title: '金枪鱼API文档',
           collapsable: false,
+          sidebarDepth:1,
           children: [
             '',
-            'api-query-element.md',
+            {
+              title:"内置对象",
+              collapsable: false,
+              children:[
+                'api-builtin-catagories.md',
+                'api-builtin-parameters.md',
+              ]
+            },
             'api-select-element.md',
+            {
+              title:'查询图元',
+              collapsable: false,
+              sidebarDepth:1,
+              children:[
+                'api-query-document.md',
+                'api-query-view.md',
+                'api-query-collector.md',
+              ]
+            },
+            'api-element.md',
+            'api-parameter.md',
             'api-geometry.md',
+            {
+              title:'材质',
+              children:[
+                'api-material-color.md',
+                'api-material-appearance.md',
+              ]
+            },
             'api-transaction.md',
+            'api-unit.md',
+            'api-geometry-transient.md',
+            'api-ribbon.md',
           ]
         }
       ],
