@@ -16,6 +16,6 @@ features:
   - title: 🚁临时图元
     details: 金枪鱼提供了特有的临时图元的功能，可以使一部分图形显示在文档中而不被用户选择
   - title: 🎮Ribbon
-    details: 扩展包支持对Ribbon 对象的封装，支持通过xml写入，支持flurry api编写界面
+    details: 扩展包支持对Ribbon 对象的封装，支持通过 xml 写入，支持 fluent api 编写界面
 footer: Made by shiwu with ❤️
 ---

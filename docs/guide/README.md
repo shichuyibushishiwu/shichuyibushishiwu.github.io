@@ -12,7 +12,7 @@
 
 代码托管于[Github](https://github.com/)，您可以从仓库 [Tuan Revit API Extensions](https://github.com/shichuyibushishiwu/Tuna.Revit.Extensions)中获取所有有关的代码。如果您对项目有兴趣或者疑问，欢迎给我们提 `PR` 或者 `Issues`.
 
-### Nuget
+### Nuget 程序包
 
 扩展包发布于 [Nuget](https://www.nuget.org/) 上，方便您直接在项目中使用。扩展包依赖于[Revit_All_Main_Versions_API_x64](https://www.nuget.org/packages/Revit_All_Main_Versions_API_x64/),所以使用了金枪鱼扩展包的项目，不需要再对`dll`程序集进行依赖
 
