@@ -32,6 +32,7 @@ module.exports = {
     logo:'/assets/images/tuna.png',
     docsRepo:'shichuyibushishiwu/shichuyibushishiwu.github.io',
     docsDir: 'docs',
+    docsBranch:'main',
     editLinkText: '帮助我们完善文档',
     lastUpdated: '最后更新',
     nav: [
@@ -40,8 +41,8 @@ module.exports = {
         link: '/guide/',
       },
       {
-        text: 'Config',
-        link: '/config/'
+        text: '软件下载',
+        link: '/software/'
       },
       {
         text: 'BiliBili',
