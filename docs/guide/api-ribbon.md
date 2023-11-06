@@ -1,8 +1,8 @@
-# 界面面板（Ribbon）
+# Ribbon 界面
 
 ## 面板按钮
 
-> 该扩展类用于快速创建各类的面板按钮
+该扩展类用于快速创建各类的面板按钮
 
 ```csharp
 //Create ribbon push button

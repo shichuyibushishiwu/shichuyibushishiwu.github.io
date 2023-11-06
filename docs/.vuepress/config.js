@@ -38,7 +38,7 @@ module.exports = {
     lastUpdated: 'Last Updated',
     nav: [
       {
-        text: 'Api 文档',
+        text: '指南',
         link: '/guide/',
       },
       {
@@ -53,7 +53,7 @@ module.exports = {
     sidebar: {
       '/guide/': [
         {
-          title: '金枪鱼API文档',
+          title: '金枪鱼指南',
           collapsable: false,
           sidebarDepth:1,
           children: [
