@@ -4,7 +4,7 @@
 
 > 讲颜色转换为 Html 字符串颜色表现形式
 
-```C#
+```csharp
 //Convert to html
 string color = color.ConvertToHTML();
 ```
@@ -13,7 +13,7 @@ string color = color.ConvertToHTML();
 
 > 将系统颜色类转换为 Revit 的颜色类
 
-```C#
+```csharp
 // System drawing color convet to revit color
 Autodesk.Revit.DB.Color color = color.ConvertToRevitColor();
 ```
@@ -22,7 +22,7 @@ Autodesk.Revit.DB.Color color = color.ConvertToRevitColor();
 
 > 确认两个 Revit 颜色是否相同，相同则返回 true，反之返回 false
 
-```C#
+```csharp
 //Check value is equal between two Revit Color
 color.EqualTo(color);
 ```

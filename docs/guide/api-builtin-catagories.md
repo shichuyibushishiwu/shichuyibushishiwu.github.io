@@ -1,6 +1,8 @@
 # 内置类别
 
-> 扩展库支持引用所有 `Revit` 中的内置类别的`ElementId`
+::: tip Introduction
+扩展库支持引用所有 `Revit` 中的内置类别的`ElementId`
+:::
 
 ### 内置类别`ElementId`
 

@@ -1,6 +1,8 @@
 # 内置参数
 
-> 扩展库支持引用部分 `Revit` 中的内置参数的`ElementId`
+::: tip Introduction
+扩展库支持引用部分 `Revit` 中的内置参数的`ElementId`
+:::
 
 ### 视图（View）
 
