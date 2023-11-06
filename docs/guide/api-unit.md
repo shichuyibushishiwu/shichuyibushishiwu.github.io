@@ -1,13 +1,21 @@
 # 单位转换（Unit）
 
-## int 类型数值的单位转换（ConvertToMillimeters）
+::: tip
+在 `Revit Api` 的数学计算逻辑中，通常是以英制的形式进行，但是往往我们在代码中以公制的形式进行表达，所以对于从 `API` 中的数据读取，需要进行单位的转换
+:::
 
-> 将数值单位转换为毫米
+### 转换为公制
 
-`double result=ConvertToMillimeters(this intvalue)`
+将数值单位转换为公制
 
-## double 类型数值的单位转换（ConvertToMillimeters）
+```csharp
+double result = element.LookupParameter("length")?.AsDouble().ConvertToMillimeters();
+```
 
-> 将数值单位转换为毫米
+### 转换为英制
 
-`double result=ConvertToMillimeters(this double value)`
+将数值单位转换为英制
+
+```csharp
+element.LookupParameter("length")?.Set(1000.ConvertToFeet());
+```
