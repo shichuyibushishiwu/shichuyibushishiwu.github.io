@@ -35,7 +35,7 @@ module.exports = {
     docsDir: 'docs',
     docsBranch:'main',
     editLinkText: '帮助我们完善文档',
-    lastUpdated: '最后更新',
+    lastUpdated: 'Modified',
     nav: [
       {
         text: 'Api 文档',
