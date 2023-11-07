@@ -2,31 +2,30 @@
 
 > 扩展库封装对参数的一系列操作
 
-## 通过 Id 获取参数(Get parameter by parameter element id )
+### 获取参数
 
 ```csharp
 Parameter parameter = element.GetParameter(new ElementId(-122344));
-
 ```
 
 当然也可以使用扩展库内置对象进行获取
 
 ```csharp
 Parameter parameter = element.GetParameter(Constants.BuiltInParameters.View.Name);
-
 ```
 
-## 获取参数的值(Get parameter value)
+### 参数读写
+
+> 金枪鱼提供了两个方法进行参数的读写，但是并不是最建议的方式，因为内部实现会导致装箱和拆箱；
+
+读取参数
 
 ```csharp
-//Obtain parameter value based on StorageType
-int value= element.GetParameterValue<int>("Width");
-
+int value = element.GetParameterValue<int>("Width");
 ```
 
-## 设置参数的值(Set Parameter Value)
+写入参数
 
 ```csharp
-//Set parameter value based on StorageType
 element.SetParameterValue<int>("Width",10);
 ```

@@ -11,16 +11,14 @@
 比如我们最常用的方式：
 
 ```csharp
-FilteredElementCollector elements=document.GetElements(typeof(Wall));
+FilteredElementCollector elements = document.GetElements(typeof(Wall));
 ```
 
 又或者是指定泛型：
 
 ```csharp
-//generic type to get elements
 IEnumerable<Wall> walls=document.GetElements<Wall>();
 
-//add predicate
 IEnumerable<Wall> walls=document.GetElements<Wall>(w => w.Name == "100");
 ```
 
