@@ -45,7 +45,7 @@ module.exports = {
         link: "/guide/",
       },
       {
-        text: "软件下载",
+        text: "插件",
         link: "/software/",
       },
       {
