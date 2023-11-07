@@ -10,7 +10,7 @@
 
 ### 源码
 
-代码托管于[Github](https://github.com/)，您可以从仓库 [Tuan Revit API Extensions](https://github.com/shichuyibushishiwu/Tuna.Revit.Extensions)中获取所有有关的代码。如果您对项目有兴趣或者疑问，欢迎给我们提 `PR` 或者 `Issues`.
+代码托管于[Github](https://github.com/)，您可以从仓库 [Tuan Revit API Extensions](https://github.com/shichuyibushishiwu/Tuna.Revit.Extensions)中获取所有有关的代码。如果您对项目有兴趣或者疑问，欢迎给我们提 `PR` 或者 `Issues`。
 
 ### Nuget 程序包
 
@@ -22,7 +22,7 @@ dotnet add package Tuna.Revit.Extension --version 2024.0.11
 
 ### 多版本配置
 
-在`csproj`中，可以添加对扩展包多版本的支持（使用`SDK Style`风格的项目）。本文配置中，添加了自定义的属性`TunaVersion`，方便于后续扩展包更新（直接修改自定义属性即可）。
+在`csproj`中，可以添加对扩展包多版本的支持（建议使用[SDK Style](https://learn.microsoft.com/zh-cn/dotnet/standard/frameworks)风格的项目）。本文配置中，添加了自定义的属性`TunaVersion`，方便于后续扩展包更新（直接修改自定义属性即可）。
 
 ```xml
 ﻿<Project Sdk="Microsoft.NET.Sdk">
