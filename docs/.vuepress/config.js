@@ -95,6 +95,7 @@ module.exports = {
             "api-unit.md",
             "api-geometry-transient.md",
             "api-ribbon.md",
+            "api-services-externalevent.md",
           ],
         },
       ],

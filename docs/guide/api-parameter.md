@@ -7,11 +7,11 @@
 读取参数
 
 ```csharp
-int value = element.GetParameter(BuiltInParameters.View.Description).GetParameterValue<string>("hello revit");
+int value = element.GetParameter(BuiltInParameters.View.Description)?.GetParameterValue<string>("hello revit");
 ```
 
 写入参数
 
 ```csharp
-element.GetParameter(BuiltInParameters.View.Description).SetParameterValue<string>("hello revit");
+element.GetParameter(BuiltInParameters.View.Description)?.SetParameterValue<string>("hello revit");
 ```
