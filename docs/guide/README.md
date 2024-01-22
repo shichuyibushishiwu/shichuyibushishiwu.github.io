@@ -25,7 +25,7 @@ dotnet add package Tuna.Revit.Extension --version 2024.0.11
 在`csproj`中，可以添加对扩展包多版本的支持（建议使用[SDK Style](https://learn.microsoft.com/zh-cn/dotnet/standard/frameworks)风格的项目）。本文配置中，添加了自定义的属性`TunaVersion`，方便于后续扩展包更新（直接修改自定义属性即可）。
 
 ```xml
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
       <Configurations>
         Debug;Release;
@@ -39,72 +39,68 @@ dotnet add package Tuna.Revit.Extension --version 2024.0.11
         Rvt_23_Debug;Rvt_23_Release;
         Rvt_24_Debug;Rvt_24_Release;
     </Configurations>
-    <TunaVersion>8</TunaVersion>
+    <TunaVersion>13</TunaVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration.StartsWith(Rvt_16))'">
-    <RvtVersion>2016</RvtVersion>
+    <RvtVersion>2016.2</RvtVersion>
     <DefineConstants>Rvt_16</DefineConstants>
     <TargetFramework>net452</TargetFramework>
-    <Version>2016.2.$(TunaVersion)</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration.StartsWith(Rvt_17))'">
-    <RvtVersion>2017</RvtVersion>
+    <RvtVersion>2017.2</RvtVersion>
     <DefineConstants>Rvt_17</DefineConstants>
     <TargetFramework>net46</TargetFramework>
-    <Version>2017.2.$(TunaVersion)</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration.StartsWith(Rvt_18))'">
-    <RvtVersion>2018</RvtVersion>
+    <RvtVersion>2018.2</RvtVersion>
     <DefineConstants>Rvt_18</DefineConstants>
     <TargetFramework>net46</TargetFramework>
-    <Version>2018.2.$(TunaVersion)</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration.StartsWith(Rvt_19))'">
-    <RvtVersion>2019</RvtVersion>
+    <RvtVersion>2019.0</RvtVersion>
     <DefineConstants>Rvt_19</DefineConstants>
     <TargetFramework>net47</TargetFramework>
-    <Version>2019.0.$(TunaVersion)</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration.StartsWith(Rvt_20))'">
-    <RvtVersion>2020</RvtVersion>
+    <RvtVersion>2020.0</RvtVersion>
     <DefineConstants>Rvt_20</DefineConstants>
     <TargetFramework>net47</TargetFramework>
     <Version>2020.0.$(TunaVersion)</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration.StartsWith(Rvt_21))'">
-    <RvtVersion>2021</RvtVersion>
+    <RvtVersion>2021.0</RvtVersion>
     <DefineConstants>Rvt_21</DefineConstants>
     <TargetFramework>net48</TargetFramework>
-    <Version>2021.0.$(TunaVersion)</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration.StartsWith(Rvt_22))'">
-    <RvtVersion>2022</RvtVersion>
+    <RvtVersion>2022.0</RvtVersion>
     <DefineConstants>Rvt_22</DefineConstants>
     <TargetFramework>net48</TargetFramework>
-    <Version>2022.0.$(TunaVersion)</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration.StartsWith(Rvt_23))'">
-    <RvtVersion>2023</RvtVersion>
+    <RvtVersion>2023.0</RvtVersion>
     <DefineConstants>Rvt_23</DefineConstants>
     <TargetFramework>net48</TargetFramework>
-    <Version>2023.0.$(TunaVersion)</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration.StartsWith(Rvt_24))'">
-    <RvtVersion>2024</RvtVersion>
+    <RvtVersion>2024.0</RvtVersion>
     <DefineConstants>Rvt_24</DefineConstants>
     <TargetFramework>net48</TargetFramework>
-    <Version>2024.0.$(TunaVersion)</Version>
   </PropertyGroup>
-  ﻿
-﻿</Project>
+
+  <ItemGroup >
+    <PackageReference Include="Tuna.Revit.Extension" Version="$(RvtVersion).$(TunaVersion)"/>
+  </ItemGroup>
+
+</Project>
 
 ```

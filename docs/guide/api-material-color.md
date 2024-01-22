@@ -2,7 +2,7 @@
 
 ### Revit 颜色转 HTML 颜色
 
-讲颜色转换为 Html 字符串颜色表现形式
+将颜色转换为 Html 字符串颜色表现形式
 
 ```csharp
 string color = color.ConvertToHTML();
@@ -21,5 +21,5 @@ Autodesk.Revit.DB.Color color = color.ConvertToRevitColor();
 确认两个 Revit 颜色是否相同，相同则返回 true，反之返回 false
 
 ```csharp
-color.EqualTo(color);
+bool result = color.IsEqualTo(otherColor);
 ```
