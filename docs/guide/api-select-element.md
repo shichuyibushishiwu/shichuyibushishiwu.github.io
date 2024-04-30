@@ -1,7 +1,9 @@
 # 选择图元
 
 ::: tip 介绍
-在 `Revit` 开发过程中，选择对象是我们最常用的交互方式之一，通过提示用户选择对象，并在程序中对成功选择的对象进行处理，或者读取对应的信息，以达到我们程序的目的。
+在 `Revit` 开发过程中，用户操作鼠标在文档中选择对象是我们最常用的交互方式之一。
+
+我们可以通过提示让用户选择目标对象，并在程序中对用户成功选择的对象进行处理，或者读取对应的信息，以达到我们程序的目的。
 :::
 
 选择对象的方式有很多种，包括：
@@ -9,12 +11,6 @@
 - 单选
 - 多选
 - 框选
-
-扩展包对选择后的结果进行封装，统一返回值为 `SectionResult<T>` 的泛型；
-
-如果成功，则返回值的属性 `Successed` 将为 `true` ；
-
-反之，如果用户取消选择时（如按下 `ESC`），扩展包会拦截错误信息（ `Revit API` 默认情况下会在用户取消选择时抛出异常），此时 `Succeeded` 属性结果为 `false`。
 
 ## 单选对象
 
@@ -25,7 +21,7 @@
 SelectionResult<Reference> result = uiDocument.SelectObject(
     Autodesk.Revit.UI.Selection.ObjectType.Face ,
     prompt : "请选择一个要操作面");
-if(result.Successed)
+if(result.SelectionStatus == SelectionStatus.Succeeded)
 {
     Reference reference = result.Value;
 }
@@ -39,7 +35,7 @@ SelectionResult<Reference> result = uiDocument.SelectObject(
     referencePredicate: parameters => parameters.Reference?.ConvertToStableRepresentation(document).Contains("SURFACE"),
     prompt:"请选择链接的项目中一个要操作面");
 
-if(result.Successed)
+if(result.SelectionStatus == SelectionStatus.Succeeded)
 {
     Reference reference = result.Value;
 }
@@ -53,7 +49,7 @@ SelectionResult<Reference> result = uiDocument.SelectObject(
     element=>element.Category.Id== BuiltInCategories.Wall
     prompt:"请选择链接的项目中一个要操作面");
 
-if(result.Successed)
+if(result.SelectionStatus == SelectionStatus.Succeeded)
 {
     Reference reference = result.Value;
 }
@@ -80,7 +76,7 @@ Element element = uiDocument.SelectElement(
 
 ```csharp
 SelectionResult<IList<Reference>> result = uiDocument.SelectObjects(Autodesk.Revit.UI.Selection.ObjectType.Face);
-if(result.Successed)
+if(result.SelectionStatus == SelectionStatus.Succeeded)
 {
     IList<Reference> references = result.Value;
 }
@@ -90,7 +86,7 @@ if(result.Successed)
 
 ```csharp
 SelectionResult<IList<Element>> result = uiDocument.SelectElements(BuiltinCategory.OST_Walls);
-if(result.Successed)
+if(result.SelectionStatus == SelectionStatus.Succeeded)
 {
     IList<Element> references = result.Value;
 }
@@ -102,7 +98,7 @@ if(result.Successed)
 
 ```csharp
 SelectionResult<IList<Element>> result = uiDocument.SelectElementsByRectangle(BuiltinCategory.OST_Walls);
-if(result.Successed)
+if(result.SelectionStatus == SelectionStatus.Succeeded)
 {
     IList<Element> elements = result.Value;
 }
@@ -114,8 +110,55 @@ if(result.Successed)
 
 ```csharp
 SelectionResult<XYZ> result = uiDocument.SelectPoint("请选择一个点");
-if(result.Successed)
+if(result.SelectionStatus == SelectionStatus.Succeeded)
 {
     XYZ point = result.Value;
 }
 ```
+
+## 返回值
+
+扩展包对选择后的结果进行封装，统一返回值为 `SectionResult<T>` 的泛型；
+
+```csharp
+public class SelectionResult<T>
+{
+    /// <summary>
+    /// message
+    /// </summary>
+    public string Message { get; set; }
+
+    /// <summary>
+    /// result
+    /// </summary>
+    public T Value { get; }
+
+    /// <summary>
+    /// selction state
+    /// </summary>
+    public SelectionStatus SelectionStatus { get; set; }
+
+    /// <summary>
+    /// exception
+    /// </summary>
+    public Exception Exception { get; set; }
+
+    /// <summary>
+    /// Has exception
+    /// </summary>
+    public bool HasException  { get; }
+}
+```
+
+用户的选择操作有三种状态：
+::: tip 如果成功
+则返回值的属性 `SelectionStatus` 将为 `SelectionStatus.Succeeded` ;
+:::
+
+::: warning 如果用户取消选择（如按下 ESC）
+则返回值的属性 `SelectionStatus` 将为 `SelectionStatus.Cancelled` ;
+:::
+
+::: danger 如果失败
+则返回值的属性 `SelectionStatus` 将为 `SelectionStatus.Failed` ;
+:::
