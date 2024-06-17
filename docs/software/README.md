@@ -23,8 +23,11 @@ sidebar: auto
 
 > 对风管系统的基本管理功能
 
-## 软件下载
+## 历史版本
 
-放一个软件下载的地址
+<github-releases/>
+
+<demo-component/>
+<OtherComponent/>
 
 ## 鸣谢
