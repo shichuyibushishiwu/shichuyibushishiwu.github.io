@@ -1,25 +1,24 @@
 <template>
-  <div>
-    <p>{{ name }}</p>
+  <div class="border">
+    <!-- <p>{{ name }}</p>
     <p>{{ count }}</p>
-    <a :href="url">下载</a>
+    <a :href="url">下载</a> -->
+    <p>asd</p>
   </div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      name: "",
-      count: 0,
-      url: "",
-    };
+  props: {
+    name: String,
+    count: String,
+    url: String,
   },
 };
 </script>
 
 <style>
-.container {
+.border {
   background-color: antiquewhite;
 }
 </style>
