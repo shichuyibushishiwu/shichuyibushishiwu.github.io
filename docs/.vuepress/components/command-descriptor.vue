@@ -2,7 +2,11 @@
   <div class="container">
     <li v-for="command in commands">
       <div class="item">
-        <img :alt="command.name" :title="command.name" />
+        <img
+          src="../public/assets/icon/duct.svg"
+          :alt="command.name"
+          :title="command.name"
+        />
         <p class="title">{{ command.title }}</p>
       </div>
     </li>
@@ -22,61 +26,61 @@ export default {
       this.commands.push({
         title: "当前视图过滤器",
         name: "filters",
-        svg: "../dist/assets/icon/duct.svg",
+        svg: "../public/assets/icon/duct.svg",
       });
 
       this.commands.push({
         title: "复制其他视图过滤器",
         name: "filters",
-        svg: "../dist/assets/icon/duct.svg",
+        svg: "../public/assets/icon/duct.svg",
       });
 
       this.commands.push({
         title: "材质管理",
         name: "filters",
-        svg: "../dist/assets/icon/duct.svg",
+        svg: "../public/assets/icon/duct.svg",
       });
 
       this.commands.push({
         title: "复制视图",
         name: "filters",
-        svg: "../dist/assets/icon/duct.svg",
+        svg: "../public/assets/icon/duct.svg",
       });
 
       this.commands.push({
         title: "风管系统",
         name: "filters",
-        svg: "../dist/assets/icon/duct.svg",
+        svg: "../public/assets/icon/duct.svg",
       });
 
       this.commands.push({
         title: "水管系统",
         name: "filters",
-        svg: "../dist/assets/icon/duct.svg",
+        svg: "../public/assets/icon/duct.svg",
       });
 
       this.commands.push({
         title: "桥架类型",
         name: "filters",
-        svg: "../dist/assets/icon/duct.svg",
+        svg: "../public/assets/icon/duct.svg",
       });
 
       this.commands.push({
         title: "过滤器",
         name: "filters",
-        svg: "../dist/assets/icon/duct.svg",
+        svg: "../public/assets/icon/duct.svg",
       });
 
       this.commands.push({
         title: "线型图案",
         name: "filters",
-        svg: "../dist/assets/icon/duct.svg",
+        svg: "../public/assets/icon/duct.svg",
       });
 
       this.commands.push({
         title: "视图样板",
         name: "filters",
-        svg: "../dist/assets/icon/duct.svg",
+        svg: "../public/assets/icon/duct.svg",
       });
     },
   },
