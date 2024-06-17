@@ -25,9 +25,4 @@ sidebar: auto
 
 ## 历史版本
 
-<github-releases/>
-
-<demo-component/>
-<OtherComponent/>
-
 ## 鸣谢
