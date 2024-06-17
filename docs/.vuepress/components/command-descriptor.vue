@@ -2,11 +2,7 @@
   <div class="container">
     <li v-for="command in commands">
       <div class="item">
-        <img
-          src="../dist/assets/icon/duct.svg"
-          :alt="command.name"
-          :title="command.name"
-        />
+        <img :alt="command.name" :title="command.name" />
         <p class="title">{{ command.title }}</p>
       </div>
     </li>
