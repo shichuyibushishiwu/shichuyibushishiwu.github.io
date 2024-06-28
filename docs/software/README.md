@@ -18,6 +18,10 @@ sidebar: auto
 
 <github-releases/>
 
+## 联系我
+
+![code](/assets/images/wechatcode.jpg)
+
 ## 鸣谢
 
 - 感谢 BIMBOX 团队所有人的支持，特别感谢熊仔在我每一次打退堂鼓的时候给予的鼓励；

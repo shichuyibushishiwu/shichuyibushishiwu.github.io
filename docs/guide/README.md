@@ -38,8 +38,9 @@ dotnet add package Tuna.Revit.Extension --version 2024.0.11
         Rvt_22_Debug;Rvt_22_Release;
         Rvt_23_Debug;Rvt_23_Release;
         Rvt_24_Debug;Rvt_24_Release;
+        Rvt_25_Debug;Rvt_25_Release;
     </Configurations>
-    <TunaVersion>13</TunaVersion>
+    <TunaVersion>15</TunaVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration.StartsWith(Rvt_16))'">
@@ -95,6 +96,12 @@ dotnet add package Tuna.Revit.Extension --version 2024.0.11
     <RvtVersion>2024.0</RvtVersion>
     <DefineConstants>Rvt_24</DefineConstants>
     <TargetFramework>net48</TargetFramework>
+  </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration.StartsWith(Rvt_25))'">
+    <RvtVersion>2025.0</RvtVersion>
+    <DefineConstants>Rvt_25</DefineConstants>
+    <TargetFramework>net8.0-windows</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup >
