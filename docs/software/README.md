@@ -8,13 +8,13 @@ sidebar: auto
 
 金枪鱼是一个基于金枪鱼 `Revit API` 扩展包开发的 `Revit` 二次开发项目，也是基于 `Mvvmlight` 所尝试寻找的最佳实践，同时还是一个开发 `Revit` 样板的好助手。
 
-当前版本支持 `Revit 2018.3-2024`。
+当前版本支持 `Revit 2018.3 - 2025`。
 
 ## 功能介绍
 
 <command-descriptor/>
 
-## 历史版本下载
+## 历史版本
 
 <github-releases/>
 
