@@ -1,6 +1,9 @@
-const { description } = require("../../package");
+import viteBundler from "@vuepress/bundler-vite";
+import { defineUserConfig } from "vuepress";
 
-module.exports = {
+// const { description } = require("../../package");
+
+export default defineUserConfig({
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
@@ -106,4 +109,10 @@ module.exports = {
    * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
    */
   plugins: ["@vuepress/plugin-back-to-top", "@vuepress/plugin-medium-zoom"],
-};
+
+  bundler:viteBundler(),
+});
+
+// module.exports = {
+
+// };

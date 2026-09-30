@@ -25,7 +25,7 @@ BuiltInCategories.CableTrayFitting
 
 ### 按视图规程获取
 
-扩展包支持按视图规程`ViewDiscipline`获取内置类别
+请注意这是`Revit API` 没有的功能，但是许多开发者在工作中都碰到这个需求，所以我们在扩展包支持了按视图规程`ViewDiscipline`获取内置类别的方法，但是这个方法在多版本中可能存在缺漏，所以如果发现缺少了什么，请及时提`Issues`给我们
 
 ```csharp
 //传入视图规程
